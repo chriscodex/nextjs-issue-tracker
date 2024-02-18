@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 function NavBar() {
   return (
-    <nav>
-      <Link href="/">Home</Link>
-      <ul>
+    <nav className='flex space-x-6'>
+      <Link href="/">Logo</Link>
+      <ul className='flex space-x-6'>
         <li>
           <Link href="/">Dashboard</Link>
         </li>
