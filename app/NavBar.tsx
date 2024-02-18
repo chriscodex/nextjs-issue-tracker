@@ -7,10 +7,10 @@ function NavBar() {
       <Link href="/"><AiFillBug /></Link>
       <ul className='flex space-x-6'>
         <li>
-          <Link href="/">Dashboard</Link>
+          <Link href="/" className='text-zinc-500 hover:text-zinc-800 transition-colors'>Dashboard</Link>
         </li>
         <li>
-          <Link href="/issues">Issues</Link>Issues
+          <Link href="/issues" className='text-zinc-500 hover:text-zinc-800'>Issues</Link>Issues
         </li>
       </ul>
     </nav>
