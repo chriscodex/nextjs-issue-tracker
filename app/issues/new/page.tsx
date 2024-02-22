@@ -7,7 +7,7 @@ function NewIssuePage() {
       <TextField.Root>
         <TextField.Input placeholder="Title" />
       </TextField.Root>
-      <TextArea placeholder="description" />
+      <TextArea placeholder="Description" />
       <Button>Submit New Issue</Button>
     </div>
   );
