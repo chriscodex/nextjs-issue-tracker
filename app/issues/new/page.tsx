@@ -1,12 +1,14 @@
 'use client';
-import { TextField, TextFieldInput } from '@radix-ui/themes';
+import { Button, TextArea, TextField, TextFieldInput } from '@radix-ui/themes';
 
 function NewIssuePage() {
   return (
-    <div className="max-w-xl">
+    <div className="max-w-xl space-y-3">
       <TextField.Root>
         <TextField.Input placeholder="Title" />
       </TextField.Root>
+      <TextArea placeholder="description" />
+      <Button>Submit New Issue</Button>
     </div>
   );
 }
