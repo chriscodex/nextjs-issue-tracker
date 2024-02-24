@@ -12,7 +12,7 @@ interface IssueForm {
 }
 
 function NewIssuePage() {
-  const { register, control } = useForm<IssueForm>();
+  const { register, control, handleSubmit } = useForm<IssueForm>();
 
   return (
     <div className="max-w-xl space-y-3">
