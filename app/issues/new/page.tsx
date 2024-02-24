@@ -6,6 +6,7 @@ import axios from 'axios';
 import { useForm, Controller } from 'react-hook-form';
 
 import 'easymde/dist/easymde.min.css';
+import { useRouter } from 'next/navigation';
 
 interface IssueForm {
   title: string;
@@ -13,13 +14,15 @@ interface IssueForm {
 }
 
 function NewIssuePage() {
+  const router = useRouter();
   const { register, control, handleSubmit } = useForm<IssueForm>();
 
   return (
     <form
       className="max-w-xl space-y-3"
-      onSubmit={handleSubmit((data) => {
-        console.log(data);
+      onSubmit={handleSubmit(async (data) => {
+        await axios.post('/api/issues', data);
+        router.push('/issues');
       })}
     >
       <TextField.Root>
