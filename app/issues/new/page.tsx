@@ -15,7 +15,12 @@ function NewIssuePage() {
   const { register, control, handleSubmit } = useForm<IssueForm>();
 
   return (
-    <div className="max-w-xl space-y-3">
+    <form
+      className="max-w-xl space-y-3"
+      onSubmit={handleSubmit((data) => {
+        console.log(data);
+      })}
+    >
       <TextField.Root>
         <TextField.Input placeholder="Title" {...register('title')} />
       </TextField.Root>
@@ -27,7 +32,7 @@ function NewIssuePage() {
         )}
       />
       <Button>Submit New Issue</Button>
-    </div>
+    </form>
   );
 }
 
