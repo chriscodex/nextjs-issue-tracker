@@ -1,8 +1,10 @@
 'use client';
 import { Button, TextField } from '@radix-ui/themes';
-import React from "react";
-import SimpleMDE from "react-simplemde-editor";
-import "easymde/dist/easymde.min.css";
+import React from 'react';
+import SimpleMDE from 'react-simplemde-editor';
+import { useForm } from 'react-hook-form';
+
+import 'easymde/dist/easymde.min.css';
 
 function NewIssuePage() {
   return (
